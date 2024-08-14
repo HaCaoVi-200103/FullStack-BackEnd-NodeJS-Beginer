@@ -1,0 +1,24 @@
+{
+  "name": "fullstack-backend-beginer",
+  "version": "1.0.0",
+  "description": "ICao Vy fullstack backend beginer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "ICao Vy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer/issues"
+  },
+  "homepage": "https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer#readme"
+}
