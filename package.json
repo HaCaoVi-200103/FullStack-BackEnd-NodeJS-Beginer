@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer/issues"
   },
-  "homepage": "https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer#readme"
+  "homepage": "https://github.com/HaCaoVi-200103/FullStack-BackEnd-NodeJS-Beginer#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
 }
