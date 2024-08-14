@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
     res.send('Hello Express!!!')
 })
 
+app.get('/abc', (req, res) => {
+    res.send('<h1>Hello ICao Vy!!!</h1>')
+})
+
 app.listen(port, () => {
     console.log(`Sever running at http://${hostname}:${port}/`);
 })
