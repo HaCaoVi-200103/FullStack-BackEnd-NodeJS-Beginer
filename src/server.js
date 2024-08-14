@@ -17,13 +17,17 @@ const express = require('express')
 const app = express();
 const port = 3000;
 const hostname = 'localhost'
+const path = require('path')
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
 
 app.get('/', (req, res) => {
     res.send('Hello Express!!!')
 })
 
-app.get('/abc', (req, res) => {
-    res.send('<h1>Hello ICao Vy!!!</h1>')
+app.get('/test', (req, res) => {
+    res.render('sample.ejs')
 })
 
 app.listen(port, () => {
