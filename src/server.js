@@ -21,9 +21,6 @@ const path = require('path')
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-console.log(process.env);
-
-
 app.get('/', (req, res) => {
     res.send('Hello Express!!!')
 })
