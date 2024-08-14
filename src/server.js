@@ -12,14 +12,16 @@
 // server.listen(port, hostname, () => {
 //     console.log(`Sever running at http://${hostname}:${port}/`);
 // })
-
+require('dotenv').config()
 const express = require('express')
 const app = express();
-const port = 3000;
-const hostname = 'localhost'
+const port = process.env.PORT;
+const hostname = process.env.HOST_NAME;
 const path = require('path')
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
+
+console.log(process.env);
 
 
 app.get('/', (req, res) => {
@@ -30,6 +32,6 @@ app.get('/test', (req, res) => {
     res.render('sample.ejs')
 })
 
-app.listen(port, () => {
+app.listen(port, hostname, () => {
     console.log(`Sever running at http://${hostname}:${port}/`);
 })
