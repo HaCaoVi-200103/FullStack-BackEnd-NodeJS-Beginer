@@ -1,14 +1,27 @@
-const http = require('http')
+// const http = require('http')
 
-const hostname = 'localhost';
+// const hostname = 'localhost';
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader('Content-Type', 'text/plain');
+//     res.end('Hello Word && ICAOVY');
+// })
+
+// server.listen(port, hostname, () => {
+//     console.log(`Sever running at http://${hostname}:${port}/`);
+// })
+
+const express = require('express')
+const app = express();
 const port = 3000;
+const hostname = 'localhost'
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello Word && ICAOVY');
+app.get('/', (req, res) => {
+    res.send('Hello Express!!!')
 })
 
-server.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Sever running at http://${hostname}:${port}/`);
 })
