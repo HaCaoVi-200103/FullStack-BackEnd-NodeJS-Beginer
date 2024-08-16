@@ -29,12 +29,9 @@ const postCreateUser = async (req, res) => {
 
 const postEditUser = async (req, res) => {
     const { id, email, name, city } = req.body;
-    console.log(id, " ", name, " ", email, " ", city);
 
     const result = await editUser(id, email, name, city)
-    console.log(result);
-
-    res.send('edit successsfull')
+    res.redirect('/')
 
 }
 
