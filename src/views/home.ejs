@@ -39,16 +39,18 @@
           <th>City</th>
           <th>Actions</th>
         </tr>
-        <%= JSON.stringify(listUser) %>
+        <% listUser.map(item=> {%>
         <tr>
-          <td>1976</td>
-          <td>9</td>
-          <td>Ever fallen in love (with someone you shouldn't've)</td>
+          <td><%=item.id %></td>
+          <td><%=item.email %></td>
+          <td><%=item.name %></td>
+          <td><%=item.city %></td>
           <td>
             <button>Edit</button>
             <button>Delete</button>
           </td>
         </tr>
+        <% }) %>
       </table>
     </div>
   </body>
