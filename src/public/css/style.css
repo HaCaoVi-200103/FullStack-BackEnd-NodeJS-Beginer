@@ -35,3 +35,19 @@
     background-color: #04AA6D;
     color: white;
 }
+
+.form {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.input-group {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    cursor: pointer;
+    margin: 20px;
+}
