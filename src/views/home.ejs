@@ -47,7 +47,7 @@
           <td><%=item.city %></td>
           <td>
             <% const pathEdit = `/edit?id=${item.id}%` %>
-            <button>Edit</button>
+            <a href="/edit/<%=item.id %>">Edit</a>
             <button>Delete</button>
           </td>
         </tr>

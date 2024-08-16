@@ -16,9 +16,9 @@ const getCreate = (req, res) => {
 }
 
 const getEditPage = async (req, res) => {
-    console.log(req.params.id);
-    // const result = await getUser(id);
-    res.render('edit.ejs');
+    const id = req.params.id;
+    const result = await getUser(id);
+    res.render('edit.ejs', { user: result });
 }
 
 const postCreateUser = async (req, res) => {

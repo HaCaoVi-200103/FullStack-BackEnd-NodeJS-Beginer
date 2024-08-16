@@ -6,7 +6,7 @@ const { getHomepage, getTest, postCreateUser, getCreate, getEditPage } = require
 router.get('/', getHomepage)
 router.get('/test', getTest)
 router.get('/create', getCreate)
-router.get('/edit', getEditPage)
+router.get('/edit/:id', getEditPage)
 
 router.post('/create-user', postCreateUser)
 
