@@ -6,37 +6,51 @@
     <title>Home Page</title>
   </head>
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid rgb(206, 204, 200);
+    }
+    tr:hover {
+      background-color: #ccc;
+    }
+  </style>
   <body>
     <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a class="active" href="/">Home</a>
+      <a href="/create">Create User</a>
     </div>
-    <div class="form">
-      <form action="/create-user" method="post">
-        <fieldset>
-          <legend>Add new User</legend>
-          <br />
-          <div class="input-group">
-            <label for="">Email</label>
-            <input name="email" type="text" />
-          </div>
-          <br />
-          <div class="input-group">
-            <label for="">Name</label>
-            <input type="text" name="name" />
-          </div>
-          <br />
-          <div class="input-group">
-            <label for="">City</label>
-            <input type="text" name="city" />
-          </div>
-          <div class="button">
-            <button>Save</button>
-          </div>
-        </fieldset>
-      </form>
+    <div>
+      <h1>List User</h1>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>City</th>
+        </tr>
+        <tr>
+          <th scope="row">Buzzcocks</th>
+          <td>1976</td>
+          <td>9</td>
+          <td>Ever fallen in love (with someone you shouldn't've)</td>
+        </tr>
+        <tr>
+          <th scope="row">The Clash</th>
+          <td>1976</td>
+          <td>6</td>
+          <td>London Calling</td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>

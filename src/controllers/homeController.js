@@ -1,11 +1,18 @@
 const connection = require('../config/database')
 
 const getHomepage = (req, res) => {
-    return res.render('home.ejs')
+    connection.query('SELECT * from Users u ', (err, result) => {
+        return res.render('home.ejs')
+
+    })
 }
 
 const getTest = (req, res) => {
     res.render('sample.ejs');
+}
+
+const getCreate = (req, res) => {
+    res.render('create.ejs');
 }
 
 const postCreateUser = (req, res) => {
@@ -20,5 +27,5 @@ const postCreateUser = (req, res) => {
 }
 
 module.exports = {
-    getHomepage, getTest, postCreateUser
+    getHomepage, getTest, postCreateUser, getCreate
 }
