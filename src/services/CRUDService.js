@@ -19,7 +19,7 @@ const getUser = async (id) => {
 }
 
 const editUser = async (id, email, name, city) => {
-    const [result, field] = connection.query(`
+    const [result, field] = await connection.query(`
             UPDATE Users
             SET email=?, name=?, city=?
             WHERE id = ?;

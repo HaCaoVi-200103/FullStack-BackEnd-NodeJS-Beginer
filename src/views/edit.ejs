@@ -16,6 +16,8 @@
         <fieldset>
           <legend>UPDATE User</legend>
           <br />
+          <input hidden value="<%= user[0].id%>" name="id" type="text" />
+
           <div class="input-group">
             <label for="">Email</label>
             <input value="<%= user[0].email%>" name="email" type="text" />
