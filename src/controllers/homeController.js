@@ -1,10 +1,11 @@
 const connection = require('../config/database')
 
-const getHomepage = (req, res) => {
-    connection.query('SELECT * from Users u ', (err, result) => {
-        return res.render('home.ejs')
+const getHomepage = async (req, res) => {
+    const [result, field] = await connection.query('SELECT * from Users u ')
+    console.log("check result>>>: ", result);
 
-    })
+    return res.render('home.ejs')
+
 }
 
 const getTest = (req, res) => {
@@ -15,15 +16,23 @@ const getCreate = (req, res) => {
     res.render('create.ejs');
 }
 
-const postCreateUser = (req, res) => {
+const postCreateUser = async (req, res) => {
     const { email, name, city } = req.body
-    connection.query(
+    // connection.query(
+    //     `INSERT into Users(email, name, city)
+    //     values(?, ?, ?)`, [email, name, city], (err, result) => {
+    //     console.log(result);
+    //     res.send('create successsfull')
+    // }
+    // )
+
+    const [result, field] = await connection.query(
         `INSERT into Users(email, name, city)
-        values(?, ?, ?)`, [email, name, city], (err, result) => {
-        console.log(result);
-        res.send('create successsfull')
-    }
+         values(?, ?, ?)`, [email, name, city],
     )
+    console.log("check result>>>: ", result);
+
+    res.send('create successsfull')
 }
 
 module.exports = {
