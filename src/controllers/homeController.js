@@ -9,10 +9,14 @@ const getTest = (req, res) => {
 }
 
 const postCreateUser = (req, res) => {
-    console.log("check form>>>", req.body);
-
-    res.send('create new user')
-
+    const { email, name, city } = req.body
+    connection.query(
+        `INSERT into Users(email, name, city)
+        values(?, ?, ?)`, [email, name, city], (err, result) => {
+        console.log(result);
+        res.send('create successsfull')
+    }
+    )
 }
 
 module.exports = {
