@@ -5,6 +5,14 @@ const getAllUser = async () => {
     return result;
 }
 
+const addUser = async (email, name, city) => {
+    const [result, field] = await connection.query(
+        `INSERT into Users(email, name, city)
+         values(?, ?, ?)`, [email, name, city],
+    )
+    return result;
+}
+
 module.exports = {
-    getAllUser
+    getAllUser, addUser
 }

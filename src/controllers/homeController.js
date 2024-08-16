@@ -1,5 +1,5 @@
 const connection = require('../config/database')
-const { getAllUser } = require('../services/CRUDService')
+const { getAllUser, addUser } = require('../services/CRUDService')
 
 const getHomepage = async (req, res) => {
     const result = await getAllUser();
@@ -17,13 +17,7 @@ const getCreate = (req, res) => {
 
 const postCreateUser = async (req, res) => {
     const { email, name, city } = req.body
-
-    const [result, field] = await connection.query(
-        `INSERT into Users(email, name, city)
-         values(?, ?, ?)`, [email, name, city],
-    )
-    console.log("check result>>>: ", result);
-
+    const result = await addUser(email, name, city);
     res.send('create successsfull')
 }
 
