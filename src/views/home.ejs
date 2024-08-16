@@ -46,6 +46,7 @@
           <td><%=item.name %></td>
           <td><%=item.city %></td>
           <td>
+            <% const pathEdit = `/edit?id=${item.id}%` %>
             <button>Edit</button>
             <button>Delete</button>
           </td>
