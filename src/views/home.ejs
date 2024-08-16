@@ -37,18 +37,17 @@
           <th>Email</th>
           <th>Name</th>
           <th>City</th>
+          <th>Actions</th>
         </tr>
+        <%= JSON.stringify(listUser) %>
         <tr>
-          <th scope="row">Buzzcocks</th>
           <td>1976</td>
           <td>9</td>
           <td>Ever fallen in love (with someone you shouldn't've)</td>
-        </tr>
-        <tr>
-          <th scope="row">The Clash</th>
-          <td>1976</td>
-          <td>6</td>
-          <td>London Calling</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
         </tr>
       </table>
     </div>
