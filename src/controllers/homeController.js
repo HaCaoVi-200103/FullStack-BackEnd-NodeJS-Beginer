@@ -6,12 +6,12 @@ const getHomepage = (req, res) => {
         'SELECT * from Users u', (err, result, field) => {
             users = result
             console.log('result>>>>', result);
+            res.send(JSON.stringify(users))
+
         }
     )
 
-    console.log("Check user>>>", users);
 
-    res.send('Hello Express vs ICao Vy!!!<br/> <a href="test">Test Page</a>')
 }
 
 const getTest = (req, res) => {
