@@ -48,7 +48,9 @@
           <td>
             <% const pathEdit = `/edit?id=${item.id}%` %>
             <a href="/edit/<%=item.id %>">Edit</a>
-            <button>Delete</button>
+            <form action="/delete-user/<%=item.id %>" method="post">
+              <button>Delete</button>
+            </form>
           </td>
         </tr>
         <% }) %>
