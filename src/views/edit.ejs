@@ -16,21 +16,21 @@
         <fieldset>
           <legend>UPDATE User</legend>
           <br />
-          <input hidden value="<%= user[0].id%>" name="id" type="text" />
+          <input hidden value="<%= user?.id%>" name="id" type="text" />
 
           <div class="input-group">
             <label for="">Email</label>
-            <input value="<%= user[0].email%>" name="email" type="text" />
+            <input value="<%= user?.email%>" name="email" type="text" />
           </div>
           <br />
           <div class="input-group">
             <label for="">Name</label>
-            <input value="<%= user[0].name%>" type="text" name="name" />
+            <input value="<%= user?.name%>" type="text" name="name" />
           </div>
           <br />
           <div class="input-group">
             <label for="">City</label>
-            <input value="<%= user[0].city%>" type="text" name="city" />
+            <input value="<%= user?.city%>" type="text" name="city" />
           </div>
           <div class="button">
             <button>Save</button>

@@ -18,7 +18,7 @@ const getCreate = (req, res) => {
 const getEditPage = async (req, res) => {
     const id = req.params.id;
     const result = await getUser(id);
-    res.render('edit.ejs', { user: result });
+    res.render('edit.ejs', { user: result.length > 0 ? result[0] : {} });
 }
 
 const postCreateUser = async (req, res) => {
@@ -29,7 +29,6 @@ const postCreateUser = async (req, res) => {
 
 const postEditUser = async (req, res) => {
     const { id, email, name, city } = req.body;
-
     const result = await editUser(id, email, name, city)
     res.redirect('/')
 
