@@ -3,6 +3,8 @@ const { getAllUser, addUser, getUser, editUser, deleteUser } = require('../servi
 
 const getHomepage = async (req, res) => {
     const result = await getAllUser();
+    console.log(result);
+
     return res.render('home.ejs', { listUser: result })
 
 }
